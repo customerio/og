@@ -1,0 +1,26 @@
+{
+  "plugins": ["@ianvs/prettier-plugin-sort-imports"],
+  "printWidth": 80,
+  "useTabs": true,
+  "trailingComma": "all",
+  "singleQuote": true,
+  "semi": true,
+  "importOrder": [
+    "",
+    "<BUILTIN_MODULES>",
+    "",
+    "<THIRD_PARTY_MODULES>",
+    "",
+    "^@local/(.*)$",
+    "^@/config/(.*)$",
+    "^@/lib/(.*)$",
+    "^@/components/(.*)$",
+    "^@/styles/(.*)$",
+    "^[./]",
+    "",
+    "// import internal deps",
+    "components/(.*)$",
+    "utils/(.*)$",
+    "helpers/(.*)$"
+  ]
+}

@@ -1,14 +1,18 @@
-import React from 'react'
-import Head from 'next/head'
-import { AppProps } from 'next/app'
+import '@/styles.css'
+import Head from "next/head"
+import Script from "next/script"
 
-import '../styles.css'
-
-export default function App({ Component, pageProps }: AppProps) {
+export default function RootLayout({
+  // Layouts must accept a children prop.
+  // This will be populated with nested layouts or pages
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return (
-    <>
-      <Head>
-        <title>Vercel OG Image Playground</title>
+    <html lang="en">
+		<Head>
+			<title>Vercel OG Image Playground</title>
         <meta
           name='viewport'
           content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no'
@@ -70,8 +74,9 @@ export default function App({ Component, pageProps }: AppProps) {
         />
         <link rel='shortcut icon' href='/favicon.ico' type='image/x-icon' />
         <link rel='icon' href='/favicon.ico' type='image/x-icon' />
-      </Head>
-      <Component {...pageProps} />
-    </>
+		</Head>
+      <body>{children}</body>
+		<Script />
+    </html>
   )
 }
