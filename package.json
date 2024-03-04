@@ -1,7 +1,6 @@
 {
   "private": true,
   "name": "cio-og",
-  "license": "MPL-2.0",
   "scripts": {
     "dev": "next",
     "build": "next build",
@@ -31,7 +30,10 @@
     "@types/pdfkit": "^0.12.7",
     "@types/react-dom": "^18.0.6",
     "@types/svg-to-pdfkit": "^0.1.0",
+    "autoprefixer": "^10.4.18",
+    "postcss": "^8.4.35",
     "regenerator": "link:@babel/runtime/regenerator",
+    "tailwindcss": "^3.4.1",
     "typescript": "5.3.3"
   }
 }

@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* Fonts for the demo */
 @font-face {
   font-family: 'Inter';
