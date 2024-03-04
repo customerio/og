@@ -1,9 +1,9 @@
 export type Tabs = {
-  [x: string]: string
-}
+	[x: string]: string;
+};
 
 const playgroundTabs: Tabs = {
-  helloworld: `<div
+	helloworld: `<div
   style={{
     height: '100%',
     width: '100%',
@@ -27,7 +27,7 @@ const playgroundTabs: Tabs = {
   <div style={{ marginTop: 40 }}>Hello, World</div>
 </div>
 `,
-  Vercel: `<div
+	Vercel: `<div
   style={{
     height: '100%',
     width: '100%',
@@ -73,7 +73,7 @@ const playgroundTabs: Tabs = {
   </div>
 </div>
 `,
-  rauchg: `<div
+	rauchg: `<div
   style={{
     display: 'flex',
     height: '100%',
@@ -130,7 +130,7 @@ const playgroundTabs: Tabs = {
   </div>
 </div>
 `,
-  'Tailwind (experimental)': `// Modified based on https://tailwindui.com/components/marketing/sections/cta-sections
+	'Tailwind (experimental)': `// Modified based on https://tailwindui.com/components/marketing/sections/cta-sections
 
 <div tw="flex flex-col w-full h-full items-center justify-center bg-white">
   <div tw="bg-gray-50 flex w-full">
@@ -150,7 +150,7 @@ const playgroundTabs: Tabs = {
     </div>
   </div>
 </div>`,
-  Gradients: `<div
+	Gradients: `<div
   style={{
     display: 'flex',
     height: '100%',
@@ -197,7 +197,7 @@ const playgroundTabs: Tabs = {
   </div>
 </div>
 `,
-  'Color Models': `<div
+	'Color Models': `<div
   style={{
     display: 'flex',
     justifyContent: 'space-between',
@@ -251,7 +251,7 @@ const playgroundTabs: Tabs = {
     </div>
   </div>
 </div>`,
-  Advanced: `// Fallback fonts and Emoji are dynamically loaded
+	Advanced: `// Fallback fonts and Emoji are dynamically loaded
 // from Google Fonts and CDNs in this demo.
 
 // You can also return a function component in the playground.
@@ -314,6 +314,6 @@ const playgroundTabs: Tabs = {
   )
 }  
 `,
-}
+};
 
-export default playgroundTabs
+export default playgroundTabs;
