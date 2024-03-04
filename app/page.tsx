@@ -431,8 +431,8 @@ const LiveSatori = withLive(function ({
 	const [objectURL, setObjectURL] = useState<string>('');
 	const [renderType, setRenderType] = useState('svg');
 	const [renderError, setRenderError] = useState(null);
-	const [width, setWidth] = useState(400 * 2);
-	const [height, setHeight] = useState(200 * 2);
+	const [width, setWidth] = useState(600 * 2);
+	const [height, setHeight] = useState(315 * 2);
 	const [iframeNode, setIframeNode] = useState<HTMLElement | undefined>();
 	const previewContainerRef = useRef<HTMLDivElement>(null);
 	const [scaleRatio, setScaleRatio] = useState(1);
@@ -812,30 +812,43 @@ const LiveSatori = withLive(function ({
 							<label htmlFor="reset">Size</label>
 							<button
 								id="reset"
-								onClick={() => {
-									setWidth(800);
-									setHeight(400);
-								}}
-							>
-								Reset
-							</button>
-							<button
-								type="button"
-								onClick={() => {
-									setWidth(1200);
-									setHeight(600);
-								}}
-							>
-								2:1
-							</button>
-							<button
-								type="button"
+								className="px-2 py-0.5 border rounded-sm hover:bg-zinc-900/5"
 								onClick={() => {
 									setWidth(1200);
 									setHeight(630);
 								}}
 							>
-								1.9:1
+								Reset (1200x630)
+							</button>
+							<button
+								type="button"
+								className="px-2 py-0.5 border rounded-sm hover:bg-zinc-900/5"
+								onClick={() => {
+									setWidth(1200);
+									setHeight(600);
+								}}
+							>
+								2:1 (1200x600)
+							</button>
+							<button
+								type="button"
+								className="px-2 py-0.5 border rounded-sm hover:bg-zinc-900/5"
+								onClick={() => {
+									setWidth(800);
+									setHeight(400);
+								}}
+							>
+								2:1 (800x400)
+							</button>
+							<button
+								type="button"
+								className="px-2 py-0.5 border rounded-sm hover:bg-zinc-900/5"
+								onClick={() => {
+									setWidth(1080);
+									setHeight(1080);
+								}}
+							>
+								1:1 (1080x1080)
 							</button>
 						</div>
 						<div className="control">
@@ -1075,15 +1088,7 @@ export default function Playground() {
 				</h1>
 				<ul>
 					<li>
-						<a href="https://vercel.com/docs/concepts/functions/edge-functions/og-image-generation">
-							Docs
-						</a>
-					</li>
-					<li>
-						<a href="https://nextjs.org/discord">Discord</a>
-					</li>
-					<li>
-						<a href="https://github.com/vercel/satori">GitHub</a>
+						<a href="https://github.com/customerio/og">GitHub</a>
 					</li>
 				</ul>
 			</nav>
