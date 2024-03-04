@@ -13,7 +13,6 @@ import toast, { Toaster } from 'react-hot-toast'
 import { LiveContext, LiveProvider, withLive } from 'react-live'
 import { Panel, PanelGroup } from 'react-resizable-panels'
 import satori from 'satori'
-import packageJson from 'satori/package.json'
 import SVGtoPDF from 'svg-to-pdfkit'
 
 import Introduction from '@/components/introduction'
@@ -899,7 +898,7 @@ const LiveSatori = withLive(function ({
                 target='_blank'
                 rel='noreferrer'
               >
-                {packageJson.version}
+                0.10.13
               </a>
             </div>
           </div>
