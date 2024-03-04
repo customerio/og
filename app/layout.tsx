@@ -1,6 +1,57 @@
 import '@/styles.css';
-import Head from 'next/head';
 import Script from 'next/script';
+
+import { Metadata, Viewport } from 'next';
+import { PreloadResources } from './preload-resources';
+
+const title = 'Customer.io OG Image Playground';
+const description = 'Generate Open Graph images with Vercel’s Edge Function.';
+const url = 'https://og-cio.vercel.app';
+
+export const metadata: Metadata = {
+	title: title,
+	description: description,
+	openGraph: {
+		title: title,
+		description: description,
+		url: url,
+		siteName: 'Next.js',
+		images: [
+			{
+				url: `${url}/og.png`, // Must be an absolute URL
+				width: 800,
+				height: 600,
+			},
+			{
+				url: `${url}/og.png`, // Must be an absolute URL
+				width: 1800,
+				height: 1600,
+				alt: 'My custom alt',
+			},
+		],
+		locale: 'en_US',
+		type: 'website',
+	},
+	twitter: {
+		card: 'summary_large_image',
+		title: title,
+		description: description,
+		creator: '@customerio',
+		images: [`${url}/og.png`], // Must be an absolute URL
+	},
+	icons: {
+		icon: '/favicon.ico',
+		shortcut: '/favicon.ico',
+	},
+};
+
+export const viewport: Viewport = {
+	themeColor: '#fff',
+	width: 'device-width',
+	initialScale: 1,
+	maximumScale: 1,
+	userScalable: false,
+};
 
 export default function RootLayout({
 	// Layouts must accept a children prop.
@@ -11,67 +62,7 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en">
-			<Head>
-				<title>Customer.io OG Image Playground</title>
-				<meta
-					name="viewport"
-					content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
-				/>
-				<meta name="theme-color" content="#fff" />
-				<meta name="title" content="Customer.io OG Image Playground" />
-				<meta
-					name="description"
-					content="Generate Open Graph images with Vercel’s Edge Function."
-				/>
-				<meta property="og:type" content="website" />
-				<meta property="og:url" content="https://og-cio.vercel.app/" />
-				<meta property="og:title" content="Customer.io OG Image Playground" />
-				<meta
-					property="og:description"
-					content="Generate Open Graph images with Vercel’s Edge Function."
-				/>
-				<meta property="og:image" content="https://og-cio.vercel.app/og.png" />
-				<meta property="twitter:card" content="summary_large_image" />
-				<meta property="twitter:url" content="https://og-cio.vercel.app/" />
-				<meta
-					property="twitter:title"
-					content="Customer.io OG Image Playground"
-				/>
-				<meta
-					property="twitter:description"
-					content="Generate Open Graph images with Vercel’s Edge Function."
-				/>
-				<meta
-					property="twitter:image"
-					content="https://og-cio.vercel.app/og.png"
-				/>
-				<link
-					rel="preload"
-					href="/inter-latin-ext-400-normal.woff"
-					as="fetch"
-					crossOrigin="anonymous"
-				/>
-				<link
-					rel="preload"
-					href="/inter-latin-ext-700-normal.woff"
-					as="fetch"
-					crossOrigin="anonymous"
-				/>
-				<link
-					rel="preload"
-					href="/material-icons-base-400-normal.woff"
-					as="fetch"
-					crossOrigin="anonymous"
-				/>
-				<link
-					rel="preload"
-					href="/iaw-mono-var.woff2"
-					as="fetch"
-					crossOrigin="anonymous"
-				/>
-				<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-				<link rel="icon" href="/favicon.ico" type="image/x-icon" />
-			</Head>
+			<PreloadResources />
 			<body>{children}</body>
 			<Script />
 		</html>
