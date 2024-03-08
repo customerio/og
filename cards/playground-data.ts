@@ -2,7 +2,115 @@ export type Tabs = {
 	[x: string]: string;
 };
 
+const logoUrl = '/mark.svg';
+
 const playgroundTabs: Tabs = {
+	default: `
+() => {
+
+	function Illustrations(name) {
+	switch (name) {
+		case 'Getting Started':
+			return "/illustrations/getting-started.svg"
+		case 'Accounts':
+			return "/illustrations/accounts-and-workspaces.svg"
+		case 'Our Company':
+			return "/illustrations/our-company.svg"
+		case 'API':
+			return "/illustrations/api.svg"
+		case 'People':
+			return "/illustrations/people.svg"
+		case 'Customer Data':
+			return "/illustrations/customer-data.svg"
+		case 'Liquid':
+			return "/illustrations/customer-data.svg"
+		case 'Campaigns and Workflows':
+			return "/illustrations/messaging.svg"
+		case 'Messages and Webhooks':
+			return "/illustrations/messaging.svg"
+		case 'Integrations':
+			return "/illustrations/integrations.svg"
+		case 'Metrics (1)':
+			return "/illustrations/metrics1.svg"
+		case 'Release Notes':
+			return "/illustrations/release-notes.svg"
+		case 'Metrics (2)':
+			return "/illustrations/metrics2.svg"
+		case 'Segmentation':
+			return "/illustrations/segmentation.svg"
+		case 'No image':
+			return "/illustrations/no-image.svg"
+		case null:
+			return null;
+	}
+}
+
+	const themeOptions = {
+			verdant: {
+				fill: 'verdant',
+				backgroundColor: '#0B353B',
+				color: '#E4FFCE',
+			},
+			evergreen: {
+				fill: 'evergreen',
+				backgroundColor: '#E4FFCE',
+				color: '#0B353B',
+			},
+			dark: {
+				fill: 'verdant',
+				backgroundColor: '#0B353B',
+				color: '#E4FFCE',
+			},
+			light: {
+				fill: 'evergreen',
+				backgroundColor: '#E4FFCE',
+				color: '#0B353B',
+			},
+		};
+
+	const theme = themeOptions["verdant"] // Edit this to change colors
+	const title = "Hello world" // Edit this to change the displayed text
+	const image = "Getting Started" // Edit this to change the displayed image
+ 
+  return (
+    <div
+					style={{
+						height: '100%',
+						width: '100%',
+						display: 'flex',
+						flexDirection: 'column',
+						alignItems: 'stretch',
+						justifyContent: 'space-between',
+						backgroundColor: theme.backgroundColor,
+						color: theme.color,
+						padding: '5%',
+					}}
+				>
+					<div tw="flex flex-row items-center justify-start pt-20">
+						<img
+					src={Illustrations(image)}
+					width="400"
+					height="400"
+					tw="h-64 w-64 mx-20"
+				/>
+						<h2 tw="text-6xl tracking-tight font-extrabold">{title}</h2>
+					</div>
+					<div tw="w-full flex items-center justify-end">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 104.5 104.5">
+			<g>
+				<g strokeWidth="0" fill={theme.color}>
+					<path d="M78.3999 0L52.2 0 52.2 26.1001 78.3999 52.1997 52.2 78.3999 52.2 104.5 78.3999 104.5 104.5 78.3999 104.5 26.1001 78.3999 0z"></path>
+					<path d="M39.2 13L26.1001 0 0 0 0 26.1001 13 39.1997 26.1001 52.1997 52.2 26.1001 39.2 13z"></path>
+					<path d="M13 65.2998L0 78.3999 0 104.5 26.1001 104.5 39.2 91.3999 52.2 78.3999 26.1001 52.1997 13 65.2998z"></path>
+				</g>
+			</g>
+		</svg>
+					</div>
+				</div>
+  )
+}  
+      
+`,
 	helloworld: `<div
   style={{
     height: '100%',
@@ -25,109 +133,6 @@ const playgroundTabs: Tabs = {
     <path d="M37.59.25l36.95 64H.64l36.95-64z"></path>
   </svg>
   <div style={{ marginTop: 40 }}>Hello, World</div>
-</div>
-`,
-	Vercel: `<div
-  style={{
-    height: '100%',
-    width: '100%',
-    display: 'flex',
-    textAlign: 'center',
-    alignItems: 'center',
-    justifyContent: 'center',
-    flexDirection: 'column',
-    flexWrap: 'nowrap',
-    backgroundColor: 'white',
-    backgroundImage: 'radial-gradient(circle at 25px 25px, lightgray 2%, transparent 0%), radial-gradient(circle at 75px 75px, lightgray 2%, transparent 0%)',
-    backgroundSize: '100px 100px',
-  }}
->
-  <div
-    style={{
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-    }}
-  >
-    <svg
-      height={80}
-      viewBox="0 0 75 65"
-      fill="black"
-      style={{ margin: '0 75px' }}
-    >
-      <path d="M37.59.25l36.95 64H.64l36.95-64z"></path>
-    </svg>
-  </div>
-  <div
-    style={{
-      display: 'flex',
-      fontSize: 40,
-      fontStyle: 'normal',
-      color: 'black',
-      marginTop: 30,
-      lineHeight: 1.8,
-      whiteSpace: 'pre-wrap',
-    }}
-  >
-    <b>Vercel Edge Network</b>
-  </div>
-</div>
-`,
-	rauchg: `<div
-  style={{
-    display: 'flex',
-    height: '100%',
-    width: '100%',
-    alignItems: 'center',
-    justifyContent: 'center',
-    letterSpacing: '-.02em',
-    fontWeight: 700,
-    background: 'white',
-  }}
->
-  <div
-    style={{
-      left: 42,
-      top: 42,
-      position: 'absolute',
-      display: 'flex',
-      alignItems: 'center',
-    }}
-  >
-    <span
-      style={{
-        width: 24,
-        height: 24,
-        background: 'black',
-      }}
-    />
-    <span
-      style={{
-        marginLeft: 8,
-        fontSize: 20,
-      }}
-    >
-      rauchg.com
-    </span>
-  </div>
-  <div
-    style={{
-      display: 'flex',
-      flexWrap: 'wrap',
-      justifyContent: 'center',
-      padding: '20px 50px',
-      margin: '0 42px',
-      fontSize: 40,
-      width: 'auto',
-      maxWidth: 550,
-      textAlign: 'center',
-      backgroundColor: 'black',
-      color: 'white',
-      lineHeight: 1.4,
-    }}
-  >
-    Making the Web. Faster.
-  </div>
 </div>
 `,
 	'Tailwind (experimental)': `// Modified based on https://tailwindui.com/components/marketing/sections/cta-sections

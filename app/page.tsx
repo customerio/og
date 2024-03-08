@@ -460,6 +460,30 @@ const LiveSatori = withLive(function ({
 						const configScript = doc.createElement('script');
 						configScript.text = `
             tailwind.config = {
+					theme: {
+						extend: {
+							colors: {
+								verdant: { 500:'#E4FFCE'},
+								evergreen: { 500:'#0B353B'},
+								cosmic: { 500:'#FFF5C1'},
+								mauve: { 500:'#FCECFF'},
+								lavender: { 500:'#D6D8FF'},
+								arctic: { 500:'#C0F8F8'},
+								warmGray: { 500:'#FBF9F8'},
+								coconut: { 500:'#27201D'},
+								sangria: { 500:'#3B0B22'},
+								indigo: { 500:'#2C155D'},
+								moss: { 500:'#2E340C'},
+								charcoal: { 500:'#151515'},
+								tertiaryTeal: { 500:'#44D4DE'},
+								tertiaryBlue: { 500:'#0075FF'},
+								tertiaryPurple: { 500:'#533FCD'},
+								tertiaryYellow: { 500:'#F7B83F'},
+								tertiaryOrange: { 500:'#FD7742'},
+								tertiaryPlum: { 500:'#95DE5F'},
+							},
+						},
+					},
               plugins: [{
                 handler({ addBase }) {
                   addBase({
@@ -950,7 +974,7 @@ function ResetCode({ activeCard }: { activeCard: string }) {
 					const decoded = JSON.parse(decompressedData);
 					card = decoded.code;
 					overrideOptions = decoded.options;
-					tab = decoded.tab || 'helloworld';
+					tab = decoded.tab || 'default';
 				} catch (e) {
 					card = decompressedData;
 				}
@@ -978,7 +1002,7 @@ function ResetCode({ activeCard }: { activeCard: string }) {
 }
 
 export default function Playground() {
-	const [activeCard, setActiveCard] = useState<string>('helloworld');
+	const [activeCard, setActiveCard] = useState<string>('default');
 	const [showIntroduction, setShowIntroduction] = useState(false);
 	const [isMobileView, setIsMobileView] = useState(false);
 

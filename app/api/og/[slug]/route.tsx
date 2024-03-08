@@ -7,7 +7,13 @@ import Logo from '@/og/components/Logo';
 
 export const runtime = 'edge';
 
-export async function GET(request: Request) {
+export async function GET(
+	request: Request,
+	{ params }: { params: { slug: string } },
+) {
+	const slug = params.slug;
+	console.log(slug);
+
 	try {
 		const { searchParams } = new URL(request.url);
 
@@ -48,13 +54,17 @@ export async function GET(request: Request) {
 					themeOptions[themeValue]
 				: themeOptions['verdant'];
 
-		// ?title=<title>
-		const hasTitle = searchParams.has('title');
+		// Title (inferred from slug but can be overrided)
+		const hasTitle = slug ? true : searchParams.has('title');
 		const title = hasTitle
-			? searchParams.get('title')?.slice(0, 100)
+			? slug
+				? slug
+				: hasTitle
+					? searchParams.get('title')?.slice(0, 100)
+					: 'Hello world'
 			: 'Hello world';
 
-		// ?title=<title>
+		// Image
 		const hasImage = searchParams.has('image');
 		//@ts-ignore
 		const image = hasTitle ? searchParams.get('image') : null;
