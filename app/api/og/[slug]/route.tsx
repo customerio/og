@@ -12,7 +12,6 @@ export async function GET(
 	{ params }: { params: { slug: string } },
 ) {
 	const slug = params.slug;
-	console.log(slug);
 
 	try {
 		const { searchParams } = new URL(request.url);
