@@ -28,6 +28,7 @@ import { apis, getIconCode, loadEmoji } from '@/utils/twemoji';
 
 import playgroundTabs, { Tabs } from '@/cards/playground-data';
 import previewTabs from '@/cards/preview-tabs';
+import Logo from '@/og/components/Logo';
 
 const cardNames = Object.keys(playgroundTabs);
 const editedCards: Tabs = { ...playgroundTabs };
@@ -1104,10 +1105,7 @@ export default function Playground() {
 			/>
 			<nav>
 				<h1>
-					<svg viewBox="0 0 75 65" fill="#000" height="12">
-						<title>Vercel</title>
-						<path d="M37.59.25l36.95 64H.64l36.95-64z"></path>
-					</svg>
+					<span className="h-5 w-5"><Logo fill={"evergreen"} /></span>
 					OG Image Playground
 				</h1>
 				<ul>
