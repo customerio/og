@@ -3,10 +3,10 @@
 import ReactDOM from 'react-dom';
 
 export function PreloadResources() {
-	ReactDOM.preload('/inter-latin-ext-400-normal.woff', {
+	ReactDOM.preload('/InstrumentSans-Regular.woff', {
 		as: 'fetch',
 	});
-	ReactDOM.preload('/inter-latin-ext-700-normal.woff', {
+	ReactDOM.preload('/InstrumentSans-Bold.woff', {
 		as: 'fetch',
 	});
 	ReactDOM.preload('/material-icons-base-400-normal.woff', {

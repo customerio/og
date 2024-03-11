@@ -39,12 +39,8 @@ async function init() {
 	const [font, fontBold, fontIcon, Segmenter] =
 		window.__resource ||
 		(window.__resource = await Promise.all([
-			fetch('/inter-latin-ext-400-normal.woff').then((res) =>
-				res.arrayBuffer(),
-			),
-			fetch('/inter-latin-ext-700-normal.woff').then((res) =>
-				res.arrayBuffer(),
-			),
+			fetch('/InstrumentSans-Regular.woff').then((res) => res.arrayBuffer()),
+			fetch('/InstrumentSans-Bold.woff').then((res) => res.arrayBuffer()),
 			fetch('/material-icons-base-400-normal.woff').then((res) =>
 				res.arrayBuffer(),
 			),
@@ -721,7 +717,7 @@ const LiveSatori = withLive(function ({
 											<>
 												<style
 													dangerouslySetInnerHTML={{
-														__html: `@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Material+Icons');body{display:flex;height:100%;margin:0;tab-size:8;font-family:Inter,sans-serif;overflow:hidden}body>div,body>div *{box-sizing:border-box;display:flex}`,
+														__html: `@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Inter:wght@400;700&family=Material+Icons');body{display:flex;height:100%;margin:0;tab-size:8;font-family:Instrument Sans,sans-serif;overflow:hidden}body>div,body>div *{box-sizing:border-box;display:flex}`,
 													}}
 												/>
 												{live?.element ? <live.element /> : null}
@@ -1105,7 +1101,9 @@ export default function Playground() {
 			/>
 			<nav>
 				<h1>
-					<span className="h-5 w-5"><Logo fill={"evergreen"} /></span>
+					<span className="h-5 w-5">
+						<Logo fill={'evergreen'} />
+					</span>
 					OG Image Playground
 				</h1>
 				<ul>

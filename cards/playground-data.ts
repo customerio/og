@@ -6,6 +6,7 @@ const logoUrl = '/mark.svg';
 
 const playgroundTabs: Tabs = {
 	default: `
+// Scroll down until you see the lines with "Edit this"
 () => {
 
 	function Illustrations(name) {
