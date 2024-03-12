@@ -13,6 +13,10 @@ export async function GET(
 ) {
 	const slug = params.slug;
 
+	const fontData = await fetch(
+		new URL('../../../../assets/InstrumentSans-SemiBold.ttf', import.meta.url),
+	).then((res) => res.arrayBuffer());
+
 	try {
 		const { searchParams } = new URL(request.url);
 
@@ -68,8 +72,6 @@ export async function GET(
 		//@ts-ignore
 		const image = hasTitle ? searchParams.get('image') : null;
 
-		console.log(image);
-
 		return new ImageResponse(
 			(
 				// Modified based on https://tailwindui.com/components/marketing/sections/cta-sections
@@ -81,6 +83,7 @@ export async function GET(
 						flexDirection: 'column',
 						alignItems: 'stretch',
 						justifyContent: 'space-between',
+						fontFamily: '"InstrumentSans"',
 						backgroundColor: theme.backgroundColor,
 						color: theme.color,
 						padding: '5%',
@@ -98,6 +101,13 @@ export async function GET(
 			{
 				width: 1200,
 				height: 630,
+				fonts: [
+					{
+						name: 'InstrumentSans',
+						data: fontData,
+						style: 'normal',
+					},
+				],
 			},
 		);
 	} catch (e: any) {
