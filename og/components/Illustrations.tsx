@@ -68,6 +68,17 @@ export default function Illustrations({ name }: { name: string | null }) {
 				/>
 			);
 
+		case 'cdp':
+			return (
+				<img
+					src={`${process.env.WWW}/illustrations/cdp.svg`}
+					width="400"
+					height="400"
+					tw="h-64 w-64 mx-20"
+					alt={name}
+				/>
+			);
+
 		case 'people':
 			return (
 				<img
@@ -123,6 +134,17 @@ export default function Illustrations({ name }: { name: string | null }) {
 				/>
 			);
 
+		case 'integration':
+			return (
+				<img
+					src={`${process.env.WWW}/illustrations/integration.svg`}
+					width="400"
+					height="400"
+					tw="h-64 w-64 mx-20"
+					alt={name}
+				/>
+			);
+
 		case 'integrations':
 			return (
 				<img
@@ -134,6 +156,7 @@ export default function Illustrations({ name }: { name: string | null }) {
 				/>
 			);
 
+		case 'metrics':
 		case 'metrics1':
 			return (
 				<img
@@ -182,6 +205,28 @@ export default function Illustrations({ name }: { name: string | null }) {
 			return (
 				<img
 					src={`${process.env.WWW}/illustrations/segmentation.svg`}
+					width="400"
+					height="400"
+					tw="h-64 w-64 mx-20"
+					alt={name}
+				/>
+			);
+
+		case 'grid':
+			return (
+				<img
+					src={`${process.env.WWW}/illustrations/grid.svg`}
+					width="400"
+					height="400"
+					tw="h-64 w-64 mx-20"
+					alt={name}
+				/>
+			);
+
+		case 'data-integrations':
+			return (
+				<img
+					src={`${process.env.WWW}/illustrations/data-integrations.svg`}
 					width="400"
 					height="400"
 					tw="h-64 w-64 mx-20"
