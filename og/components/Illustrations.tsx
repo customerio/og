@@ -1,152 +1,202 @@
+/* eslint-disable @next/next/no-img-element */
+
 export default function Illustrations({ name }: { name: string | null }) {
 	switch (name) {
-		case 'Getting Started':
+		case 'get-started':
 			return (
 				<img
-					src={`${process.env.WWW}/illustrations/getting-started.svg`}
+					src={`${process.env.WWW}/illustrations/recipes.svg`}
 					width="400"
 					height="400"
 					tw="h-64 w-64 mx-20"
+					alt={name}
 				/>
 			);
 
-		case 'Accounts':
+		case 'overview':
+			return (
+				<img
+					src={`${process.env.WWW}/illustrations/recipes.svg`}
+					width="400"
+					height="400"
+					tw="h-64 w-64 mx-20"
+					alt={name}
+				/>
+			);
+
+		case 'accounts-and-workspaces':
 			return (
 				<img
 					src={`${process.env.WWW}/illustrations/accounts-and-workspaces.svg`}
 					width="400"
 					height="400"
 					tw="h-64 w-64 mx-20"
+					alt={name}
 				/>
 			);
 
-		case 'Our Company':
+		case 'objects-data':
+			return (
+				<img
+					src={`${process.env.WWW}/illustrations/accounts-and-workspaces.svg`}
+					width="400"
+					height="400"
+					tw="h-64 w-64 mx-20"
+					alt={name}
+				/>
+			);
+
+		case 'our-company':
 			return (
 				<img
 					src={`${process.env.WWW}/illustrations/our-company.svg`}
 					width="400"
 					height="400"
 					tw="h-64 w-64 mx-20"
+					alt={name}
 				/>
 			);
 
-		case 'API':
+		case 'api':
 			return (
 				<img
 					src={`${process.env.WWW}/illustrations/api.svg`}
 					width="400"
 					height="400"
 					tw="h-64 w-64 mx-20"
+					alt={name}
 				/>
 			);
 
-		case 'People':
+		case 'people':
 			return (
 				<img
 					src={`${process.env.WWW}/illustrations/people.svg`}
 					width="400"
 					height="400"
 					tw="h-64 w-64 mx-20"
+					alt={name}
 				/>
 			);
 
-		case 'Customer Data':
+		case 'customer-data':
 			return (
 				<img
 					src={`${process.env.WWW}/illustrations/customer-data.svg`}
 					width="400"
 					height="400"
 					tw="h-64 w-64 mx-20"
+					alt={name}
 				/>
 			);
 
-		case 'Liquid':
+		case 'liquid':
 			return (
 				<img
 					src={`${process.env.WWW}/illustrations/customer-data.svg`}
 					width="400"
 					height="400"
 					tw="h-64 w-64 mx-20"
+					alt={name}
 				/>
 			);
 
-		case 'Campaigns and Workflows':
+		case 'campaigns-and-workflows':
 			return (
 				<img
 					src={`${process.env.WWW}/illustrations/messaging.svg`}
 					width="400"
 					height="400"
 					tw="h-64 w-64 mx-20"
+					alt={name}
 				/>
 			);
 
-		case 'Messages and Webhooks':
+		case 'messages-and-webhooks':
 			return (
 				<img
 					src={`${process.env.WWW}/illustrations/messaging.svg`}
 					width="400"
 					height="400"
 					tw="h-64 w-64 mx-20"
+					alt={name}
 				/>
 			);
 
-		case 'Integrations':
+		case 'integrations':
 			return (
 				<img
 					src={`${process.env.WWW}/illustrations/integrations.svg`}
 					width="400"
 					height="400"
 					tw="h-64 w-64 mx-20"
+					alt={name}
 				/>
 			);
 
-		case 'Metrics (1)':
+		case 'metrics1':
 			return (
 				<img
 					src={`${process.env.WWW}/illustrations/metrics1.svg`}
 					width="400"
 					height="400"
 					tw="h-64 w-64 mx-20"
+					alt={name}
 				/>
 			);
 
-		case 'Release Notes':
+		case 'release-notes':
 			return (
 				<img
 					src={`${process.env.WWW}/illustrations/release-notes.svg`}
 					width="400"
 					height="400"
 					tw="h-64 w-64 mx-20"
+					alt={name}
 				/>
 			);
 
-		case 'Metrics (2)':
+		case 'metrics2':
 			return (
 				<img
 					src={`${process.env.WWW}/illustrations/metrics2.svg`}
 					width="400"
 					height="400"
 					tw="h-64 w-64 mx-20"
+					alt={name}
 				/>
 			);
 
-		case 'Segmentation':
+		case 'sdk':
+			return (
+				<img
+					src={`${process.env.WWW}/illustrations/integrations.svg`}
+					width="400"
+					height="400"
+					tw="h-64 w-64 mx-20"
+					alt={name}
+				/>
+			);
+
+		case 'segmentation':
 			return (
 				<img
 					src={`${process.env.WWW}/illustrations/segmentation.svg`}
 					width="400"
 					height="400"
 					tw="h-64 w-64 mx-20"
+					alt={name}
 				/>
 			);
 
-		case 'No image':
+		case 'no-image':
 			return (
 				<img
 					src={`${process.env.WWW}/illustrations/no-image.svg`}
 					width="400"
 					height="400"
 					tw="h-64 w-64 mx-20"
+					alt={name}
 				/>
 			);
 

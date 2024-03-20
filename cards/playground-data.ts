@@ -11,35 +11,41 @@ const playgroundTabs: Tabs = {
 
 	function Illustrations(name) {
 	switch (name) {
-		case 'Getting Started':
-			return "/illustrations/getting-started.svg"
-		case 'Accounts':
+    case 'get-started':
+			return "/illustrations/recipes.svg"
+		case 'overview':
+			return "/illustrations/recipes.svg"
+		case 'accounts-and-workspaces':
 			return "/illustrations/accounts-and-workspaces.svg"
-		case 'Our Company':
+		case 'objects-data':
+			return "/illustrations/accounts-and-workspaces.svg"
+		case 'our-company':
 			return "/illustrations/our-company.svg"
-		case 'API':
+		case 'api':
 			return "/illustrations/api.svg"
-		case 'People':
+		case 'people':
 			return "/illustrations/people.svg"
-		case 'Customer Data':
+		case 'customer-data':
 			return "/illustrations/customer-data.svg"
-		case 'Liquid':
+		case 'liquid':
 			return "/illustrations/customer-data.svg"
-		case 'Campaigns and Workflows':
+		case 'campaigns-and-workflows':
 			return "/illustrations/messaging.svg"
-		case 'Messages and Webhooks':
+		case 'messages-and-webhooks':
 			return "/illustrations/messaging.svg"
-		case 'Integrations':
+		case 'integrations':
 			return "/illustrations/integrations.svg"
-		case 'Metrics (1)':
+		case 'metrics1':
 			return "/illustrations/metrics1.svg"
-		case 'Release Notes':
+		case 'release-notes':
 			return "/illustrations/release-notes.svg"
-		case 'Metrics (2)':
+		case 'metrics2':
 			return "/illustrations/metrics2.svg"
-		case 'Segmentation':
+		case 'sdk':
+			return "/illustrations/integrations.svg"
+		case 'segmentation':
 			return "/illustrations/segmentation.svg"
-		case 'No image':
+		case 'no-image':
 			return "/illustrations/no-image.svg"
 		case null:
 			return null;
