@@ -12,49 +12,49 @@ const playgroundTabs: Tabs = {
 	function Illustrations(name) {
 	switch (name) {
     case 'get-started':
-      return "/illustrations/recipes.svg"
+      return "https://og-cio.vercel.app/illustrations/recipes.svg"
     case 'overview':
-      return "/illustrations/recipes.svg"
+      return "https://og-cio.vercel.app/illustrations/recipes.svg"
     case 'accounts-and-workspaces':
-      return "/illustrations/accounts-and-workspaces.svg"
+      return "https://og-cio.vercel.app/illustrations/accounts-and-workspaces.svg"
     case 'objects-data':
-      return "/illustrations/accounts-and-workspaces.svg"
+      return "https://og-cio.vercel.app/illustrations/accounts-and-workspaces.svg"
     case 'our-company':
-      return "/illustrations/our-company.svg"
+      return "https://og-cio.vercel.app/illustrations/our-company.svg"
     case 'api':
-      return "/illustrations/api.svg"
+      return "https://og-cio.vercel.app/illustrations/api.svg"
     case 'cdp':
-      return "/illustrations/cdp.svg"
+      return "https://og-cio.vercel.app/illustrations/cdp.svg"
     case 'people':
-      return "/illustrations/people.svg"
+      return "https://og-cio.vercel.app/illustrations/people.svg"
     case 'customer-data':
-      return "/illustrations/customer-data.svg"
+      return "https://og-cio.vercel.app/illustrations/customer-data.svg"
     case 'liquid':
-      return "/illustrations/customer-data.svg"
+      return "https://og-cio.vercel.app/illustrations/customer-data.svg"
     case 'campaigns-and-workflows':
-      return "/illustrations/messaging.svg"
+      return "https://og-cio.vercel.app/illustrations/messaging.svg"
     case 'messages-and-webhooks':
-      return "/illustrations/messaging.svg"
+      return "https://og-cio.vercel.app/illustrations/messaging.svg"
     case 'integration':
-      return "/illustrations/integration.svg"
+      return "https://og-cio.vercel.app/illustrations/integration.svg"
     case 'integrations':
-      return "/illustrations/integrations.svg"
+      return "https://og-cio.vercel.app/illustrations/integrations.svg"
     case 'metrics':case 'metrics1':
-      return "/illustrations/metrics1.svg"
+      return "https://og-cio.vercel.app/illustrations/metrics1.svg"
     case 'release-notes':
-      return "/illustrations/release-notes.svg"
+      return "https://og-cio.vercel.app/illustrations/release-notes.svg"
     case 'metrics2':
-      return "/illustrations/metrics2.svg"
+      return "https://og-cio.vercel.app/illustrations/metrics2.svg"
     case 'sdk':
-      return "/illustrations/integrations.svg"
+      return "https://og-cio.vercel.app/illustrations/integrations.svg"
     case 'segmentation':
-      return "/illustrations/segmentation.svg"
+      return "https://og-cio.vercel.app/illustrations/segmentation.svg"
     case 'grid':
-      return "/illustrations/grid.svg"
+      return "https://og-cio.vercel.app/illustrations/grid.svg"
     case 'data-integrations':
-      return "/illustrations/data-integrations.svg"
+      return "https://og-cio.vercel.app/illustrations/data-integrations.svg"
     case 'no-image':
-      return "/illustrations/no-image.svg"
+      return "https://og-cio.vercel.app/illustrations/no-image.svg"
     case null:
       return null;
 	}
@@ -85,7 +85,7 @@ const playgroundTabs: Tabs = {
 
 	const theme = themeOptions["verdant"] // Edit this to change colors
 	const title = "Hello world" // Edit this to change the displayed text
-	const image = "Getting Started" // Edit this to change the displayed image
+	const image = "get-started" // Edit this to change the displayed image
  
   return (
     <div
