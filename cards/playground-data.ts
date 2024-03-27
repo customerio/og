@@ -11,6 +11,8 @@ const playgroundTabs: Tabs = {
 
 	function Illustrations(name) {
 	switch (name) {
+    case 'external-image':
+      return "https://cdn.sanity.io/images/onirtmj2/production/79b0efb5ca7b91e4b44b55c50e135f071084e227-1162x1746.png?auto=format&fit=max&w=3840&q=80"
     case 'get-started':
       return "https://og-cio.vercel.app/illustrations/recipes.svg"
     case 'overview':
